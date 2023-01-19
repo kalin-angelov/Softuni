@@ -1,0 +1,28 @@
+function pointsValidation(arr) {
+
+    let x1 = arr.shift();
+    let y1 = arr.shift();
+    let x2 = arr.shift();
+    let y2 = arr.shift();
+
+    let first = Math.sqrt(((0 - x1) * (0 - x1)) + ((0 - y1) * (0 - y1)));
+    let second = Math.sqrt(((x2 - 0) * (x2 - 0)) + ((y2 - 0) * (y2 - 0)));
+    let last = Math.sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)));
+    
+    if (Number.isInteger(first)) {
+        console.log(`{${x1}, ${y1}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x1}, ${y1}} to {0, 0} is invalid`);
+    }
+    if (Number.isInteger(second)) {
+        console.log(`{${x2}, ${y2}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x2}, ${y2}} to {0, 0} is invalid`);
+    }
+    if (Number.isInteger(last)) {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is valid`);
+    } else {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`);
+    }
+}
+pointsValidation([3, 0, 0, 4]);
